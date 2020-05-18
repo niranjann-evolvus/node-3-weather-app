@@ -5,12 +5,12 @@ const search  = document.querySelector('input')
 const messageOne = document.querySelector('#msg-1')
 const messageTwo = document.querySelector('#msg-2')
 messageOne.textContent = "From js"
-
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     const location = search.value
     console.log(location)
     console.log("testing")
+
     messageTwo.textContent = "Loading"
     messageOne.textContent = ""
 fetch('http://localhost:1997/weather?address='+location).then((response) => {

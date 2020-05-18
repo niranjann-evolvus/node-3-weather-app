@@ -13,7 +13,7 @@ weatherForm.addEventListener('submit',(e)=>{
 
     messageTwo.textContent = "Loading"
     messageOne.textContent = ""
-fetch('http://localhost:1997/weather?address='+location).then((response) => {
+fetch('/weather?address='+location).then((response) => {
         response.json().then((data) => {
             if (location=='') {
                 console.log("Give an address")

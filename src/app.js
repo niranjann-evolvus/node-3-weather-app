@@ -2,6 +2,7 @@ const express  = require('express')
 const path = require('path')
 const hbs = require('hbs')
 const app = express()
+const port = process.env.PORT || 1997
 //const publicDir =path.join(__dirname,'../views')
 const viewPath  = path.join(__dirname,'../templates/views' )
 const partialsPath  = path.join(__dirname,'../templates/partials')
@@ -94,4 +95,6 @@ app.get('*',(req,res)=>{
         errorMessage:'Page Not found'
     })
 })
-app.listen(1997)
+app.listen(port,()=>{
+    console.log("server is up  on port port "+port)
+})
